@@ -1,0 +1,245 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f5f7ff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 25px 10px;
+}
+
+.app {
+  width: 100%;
+  max-width: 980px;
+  background: white;
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.top {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.top h1 {
+  font-size: 28px;
+}
+
+.top p {
+  color: #666;
+  margin-top: 5px;
+}
+
+.card {
+  background: #fbfbff;
+  border: 1px solid #ececff;
+  padding: 16px;
+  border-radius: 16px;
+  margin-top: 14px;
+}
+
+.card h2 {
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 0.7fr 0.6fr;
+  gap: 10px;
+  align-items: end;
+}
+
+.field label {
+  font-size: 12px;
+  color: #444;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  outline: none;
+}
+
+.btn {
+  padding: 10px 12px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 700;
+  background: #4a6cf7;
+  color: white;
+}
+
+.btn:hover {
+  background: #3e5de0;
+}
+
+.btn.danger {
+  background: #ff3b3b;
+}
+
+.btn.danger:hover {
+  background: #d63030;
+}
+
+.btn.ghost {
+  background: #e9edff;
+  color: #1b2b6b;
+}
+
+.btn.ghost:hover {
+  background: #dbe1ff;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.msg {
+  margin-top: 10px;
+  font-weight: 700;
+}
+
+.subjects {
+  display: grid;
+  gap: 10px;
+}
+
+.subjectCard {
+  padding: 12px;
+  background: #f3f5ff;
+  border: 1px solid #e5e7ff;
+  border-radius: 14px;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 0.7fr 0.5fr;
+  gap: 10px;
+  align-items: center;
+}
+
+.badge {
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  width: fit-content;
+}
+
+.badge.high { background: #ffe5e5; color: #c92a2a; }
+.badge.medium { background: #fff4d6; color: #a66a00; }
+.badge.low { background: #e6fff0; color: #0f8a3b; }
+
+.small {
+  font-size: 12px;
+  color: #555;
+}
+
+.iconBtn {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 8px 10px;
+  cursor: pointer;
+}
+
+.iconBtn:hover {
+  background: #f1f1f1;
+}
+
+.hint {
+  color: #666;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.timetable {
+  display: grid;
+  gap: 10px;
+}
+
+.dayPlan {
+  padding: 12px;
+  border-radius: 14px;
+  border: 1px solid #e6e9ff;
+  background: #ffffff;
+}
+
+.dayPlan h3 {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.dayPlan ul {
+  padding-left: 18px;
+  color: #333;
+  line-height: 1.5;
+}
+
+.taskbox {
+  display: flex;
+  gap: 10px;
+}
+
+.taskList {
+  list-style: none;
+  margin-top: 12px;
+  display: grid;
+  gap: 10px;
+}
+
+.taskItem {
+  background: #f7f8ff;
+  border: 1px solid #e6e9ff;
+  border-radius: 14px;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+}
+
+.taskLeft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.taskText.done {
+  text-decoration: line-through;
+  color: #777;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 18px;
+  color: #666;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media(max-width: 850px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .subjectCard {
+    grid-template-columns: 1fr;
+  }
+
+  .taskbox {
+    flex-direction: column;
+  }
+}

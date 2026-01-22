@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Study Planner</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="app">
+    <header class="top">
+      <h1>📌 Student Study Planner</h1>
+      <p>Plan your subjects, generate timetable & track daily tasks ✅</p>
+    </header>
+
+    <!-- Add Subject -->
+    <section class="card">
+      <h2>➕ Add Subject</h2>
+
+      <div class="grid">
+        <div class="field">
+          <label>Subject Name</label>
+          <input type="text" id="subName" placeholder="Eg: DBMS / Java / HCI" />
+        </div>
+
+        <div class="field">
+          <label>Exam Date</label>
+          <input type="date" id="examDate" />
+        </div>
+
+        <div class="field">
+          <label>Priority</label>
+          <select id="priority">
+            <option value="High">High</option>
+            <option value="Medium" selected>Medium</option>
+            <option value="Low">Low</option>
+          </select>
+        </div>
+
+        <button class="btn" id="addSubBtn">Add</button>
+      </div>
+
+      <p class="msg" id="msg"></p>
+    </section>
+
+    <!-- Subjects -->
+    <section class="card">
+      <div class="row">
+        <h2>📚 Your Subjects</h2>
+        <button class="btn danger" id="clearAllBtn">Clear All</button>
+      </div>
+
+      <div id="subjectsList" class="subjects"></div>
+    </section>
+
+    <!-- Timetable -->
+    <section class="card">
+      <div class="row">
+        <h2>🗓️ Auto Timetable Generator</h2>
+        <button class="btn" id="generateBtn">Generate</button>
+      </div>
+
+      <p class="hint">📌 Generates a simple daily plan based on closest exam date.</p>
+
+      <div id="timetable" class="timetable"></div>
+    </section>
+
+    <!-- Daily Checklist -->
+    <section class="card">
+      <div class="row">
+        <h2>✅ Daily Task Checklist</h2>
+        <button class="btn ghost" id="resetTasksBtn">Reset Today</button>
+      </div>
+
+      <div class="taskbox">
+        <input type="text" id="taskInput" placeholder="Eg: Revise Unit 2, Solve 10 MCQs..." />
+        <button class="btn" id="addTaskBtn">Add Task</button>
+      </div>
+
+      <ul id="taskList" class="taskList"></ul>
+    </section>
+
+    <footer class="footer">
+      <p>Made by Ramya 💙 | Student Study Planner</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
